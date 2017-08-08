@@ -32,3 +32,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/TileWorld 2D/Temp
+/TileWorld 2D/Temp
+/TileWorld 2D/Temp/UnityVS_bin/Debug/Assembly-CSharp.dll
