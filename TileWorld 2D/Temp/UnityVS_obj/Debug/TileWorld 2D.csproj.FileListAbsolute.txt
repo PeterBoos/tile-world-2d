@@ -1,0 +1,19 @@
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.Networking.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.VR.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.Networking.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.Analytics.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEngine.VR.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_obj\Debug\TileWorld 2D.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_obj\Debug\Assembly-CSharp.dll
+C:\Users\Peter\Documents\GIT\Unity Projects\tile-world-2d\TileWorld 2D\Temp\UnityVS_obj\Debug\Assembly-CSharp.pdb
