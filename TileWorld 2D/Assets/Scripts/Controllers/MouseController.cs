@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseController : MonoBehaviour
+public class MouseController : Singleton<MouseController>
 {
+    //TODO: this
+    /*
+     * ALL DEPRECATED IN THIS PROJECT
+     * BUT KEEP AS REFEREMCE UNTIL MOUSE
+     * DRAGGING WHEN BUILDING IS SOLVED
+     * /
+
+
     //RaycastHit hit;
     //Ray ray;
     //GameObject SelectedGamebject = null;

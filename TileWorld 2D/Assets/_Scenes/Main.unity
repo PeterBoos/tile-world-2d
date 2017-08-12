@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 3
+    m_MixedBakeMode: 2
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -138,9 +138,9 @@ MonoBehaviour:
   Width: 20
   Height: 20
   TileSprites:
-  - {fileID: 21300000, guid: d5b58350372a421419eea1b97324241b, type: 3}
-  - {fileID: 21300000, guid: 50951af72619a7546b098360bd3ab64b, type: 3}
-  - {fileID: 21300000, guid: 296b183059cc7394d9e45fc90f274470, type: 3}
+  - {fileID: 21300010, guid: da0b9bc9420f45049b37b50ab949018d, type: 3}
+  - {fileID: 21300010, guid: da0b9bc9420f45049b37b50ab949018d, type: 3}
+  - {fileID: 21300012, guid: da0b9bc9420f45049b37b50ab949018d, type: 3}
   TreeSprites:
   - {fileID: 21300000, guid: 9b793b7f984790e43892d461071bb650, type: 3}
   RockSprites:
@@ -158,6 +158,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1143209452
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593805858629678, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8897c8ba3e7fb7246b15923a02b890f5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1736234410
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,20 +237,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1736234410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32b90452afe1cc84fb57e7df48847193, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e48d747f54e05b40af523d3266f68fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   EnableMousePan: 0
   CameraPanSpeed: 20
-  ScrollSpeed: 50
+  ScrollSpeed: 20
   CameraPanBorderThickness: 10
   mainCamera: {fileID: 0}
-  LimitLeft: -20
-  LimitRight: 500
+  LimitLeft: 10
+  LimitRight: 100
   LimitFar: 15
-  LimitNear: 3
-  LimitUp: 500
-  LimitDown: -20
+  LimitNear: 5
+  LimitUp: 100
+  LimitDown: 4
 --- !u!1 &1813422796
 GameObject:
   m_ObjectHideFlags: 0
