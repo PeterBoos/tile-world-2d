@@ -70,6 +70,16 @@ public class InputController : Singleton<InputController> {
             var c = GameObject.FindObjectOfType<CharacterController>();
             Debug.Log("Found Character with name: " + c.name);
         }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            var mousePos = Input.mousePosition;
+            var worldPos = mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 0));
+            var jobPos = new Vector3((int)worldPos.x, (int)worldPos.y, (int)worldPos.z);
+
+            WorkController.AddNewWork(Work.WorkType.Chop_tree, jobPos);
+
+            Debug.Log("New work added at: " + jobPos);
+        }
     }
     #endregion
 

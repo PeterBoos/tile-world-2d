@@ -7,14 +7,14 @@ public class WorkController : Singleton<WorkController> {
     
     public static List<Work> workList;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         workList = new List<Work>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     public static void AddNewWork(Work.WorkType typeOfWork, Vector3 workPosition)
