@@ -10,26 +10,27 @@ public class CharacterController : MonoBehaviour {
     Character character;
     Vector3 moveTarget;
     bool isMoving;
-    bool isIdle;
+    public bool isIdle;
 
     // Worker
-    Work currentWork;
-    bool isAtWorkPosition;
-    float workTimeLeft;
+    public Work currentWork;
+    public bool isAtWorkPosition;
+    public float workTimeLeft;
 
     // Use this for initialization
     void Start () {
         character = new Character("Bulbo", 20f);
         moveTarget = transform.position;
         isMoving = false;
+        isIdle = true;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (character.IsDead)
-        {
-            // Do die stuffs
-        }
+		//if (character.IsDead)
+  //      {
+  //          // Do die stuffs
+  //      }
 
         if (isMoving)
         {
@@ -41,7 +42,7 @@ public class CharacterController : MonoBehaviour {
             LookForWork();
         }
 
-        if (currentWork != null)
+        if (isAtWorkPosition && currentWork != null)
         {
             DoWork();
         }
@@ -49,12 +50,14 @@ public class CharacterController : MonoBehaviour {
 
     public void MoveTo(Vector3 target)
     {
+        target.z = transform.position.z;
         SetMoveTarget(target);
+        Debug.Log("Move to: " + target);
     }
 
     void MovePlayer()
     {
-        transform.LookAt(moveTarget);
+        //transform.LookAt(moveTarget);
         transform.position = Vector3.MoveTowards(transform.position, moveTarget, Speed * Time.deltaTime);
 
         if (transform.position == moveTarget)
@@ -62,7 +65,7 @@ public class CharacterController : MonoBehaviour {
             isMoving = false;
         }
 
-        if (currentWork != null)
+        if (isMoving && currentWork != null)
         {
             var distanceToWork = Vector3.Distance(currentWork.Position, transform.position);
             if (distanceToWork <= AcceptableDistanceToWork)
@@ -77,15 +80,17 @@ public class CharacterController : MonoBehaviour {
 
     void SetMoveTarget(Vector3 moveTo)
     {
-        var planePoint = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        var plane = new Plane(Vector3.up, planePoint);
-        var ray = Camera.main.ScreenPointToRay(moveTo);
-        float point = 0f;
+        //var planePoint = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        //var plane = new Plane(Vector3.up, planePoint);
+        //var ray = Camera.main.ScreenPointToRay(moveTo);
+        //float point = 0f;
 
-        if (plane.Raycast(ray, out point))
-        {
-            moveTarget = ray.GetPoint(point);
-        }
+        //if (plane.Raycast(ray, out point))
+        //{
+        //    moveTarget = ray.GetPoint(point);
+        //}
+
+        moveTarget = moveTo;
 
         isMoving = true;
     }
@@ -99,10 +104,12 @@ public class CharacterController : MonoBehaviour {
 
     void SetNewWork(Work work)
     {
+        isIdle = false;
         currentWork = work;
         isAtWorkPosition = false;
         SetMoveTarget(work.Position);
         workTimeLeft = 3.0f;
+        Debug.Log("Character " + transform.name + " took new work: " + work.ToString());
     }
 
     void DoWork()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WorldController : Singleton<WorldController> {
 
+    public enum InterfaceState { Default, Construction }
+
     public int Width = 20;
     public int Height = 20;
 
@@ -20,10 +22,28 @@ public class WorldController : Singleton<WorldController> {
     public List<Sprite> RockSprites;
 
     private World world;
+    private InterfaceState currentInterfaceState;
+
+    #region Properties
+
+    public World World
+    {
+        get { return world; }
+        private set { world = value; }
+    }
+
+    public InterfaceState CurrentInterfaceState
+    {
+        get { return currentInterfaceState; }
+        set { currentInterfaceState = value; }
+    }
+
+    #endregion
 
     // Use this for initialization
     void Start () {
         world = new World(Width, Height);
+        currentInterfaceState = InterfaceState.Default;
         SpawnSprites();
         SpawnTrees();
         SpawnRocks();
@@ -33,6 +53,32 @@ public class WorldController : Singleton<WorldController> {
 	void Update () {
 		
 	}
+
+    /// <summary>
+	/// Gets the tile at the unity-space coordinates
+	/// </summary>
+	/// <returns>The tile at world coordinate.</returns>
+	/// <param name="coord">Unity World-Space coordinates.</param>
+	public Tile GetTileAtWorldCoord(Vector3 coord)
+    {
+        int x = Mathf.FloorToInt(coord.x + 0.5f);
+        int y = Mathf.FloorToInt(coord.y + 0.5f);
+
+        return world.GetTileAt(x, y);
+    }
+
+    public void SetMode(InterfaceState newState)
+    {
+        currentInterfaceState = newState;
+    }
+
+    public void ToggleState()
+    {
+        if (currentInterfaceState == InterfaceState.Default)
+            currentInterfaceState = InterfaceState.Construction;
+        else
+            currentInterfaceState = InterfaceState.Default;
+    }
 
     void SpawnSprites()
     {

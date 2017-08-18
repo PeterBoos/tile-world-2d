@@ -9,6 +9,8 @@ public class World {
 
     Tile[,] tiles;
 
+    Dictionary<string, InstalledObject> installedObjectPrototypes;
+
     public World(int width, int height)
     {
         Width = width;
@@ -17,7 +19,26 @@ public class World {
 
         SpawnTiles();
 
-        Debug.Log("World was created with " + tiles.Length + " (" + Width + "*" + Height + ") tiles");
+        Debug.Log("World was created with " + tiles.Length + " (" + Width + "*" + Height + ") tiles");        
+    }
+
+    void CreateInstalledObjectPrototypes()
+    {
+        installedObjectPrototypes = new Dictionary<string, InstalledObject>();
+
+        InstalledObject wallPrototype = InstalledObject.CreatePrototype(
+            "Wall",
+            0,
+            1,
+            1);
+
+        installedObjectPrototypes.Add("Wall", 
+            InstalledObject.CreatePrototype(
+                                    "Wall",
+                                    0,
+                                    1,
+                                    1)
+            );
     }
 
     void SpawnTiles()

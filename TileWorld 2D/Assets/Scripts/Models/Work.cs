@@ -44,4 +44,9 @@ public class Work {
         this.Type = type;
         this.Position = position;
     }
+
+    public override string ToString()
+    {
+        return "Work - Type: " + type.ToString() + ", Position: " + position;
+    }
 }
